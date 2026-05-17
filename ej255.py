@@ -53,6 +53,8 @@ while True:
                     if opcion_menu2 == 1:
                         celular = (input("Ingrese el número celular (9 dígitos, comience con 9): "))
                         if len(celular) == 9 and celular.startswith("9") and celular.isdigit():
+                            print("Llamando...")
+                            print("...")
                             print("Aló... ALÓ!?...")
                         else:
                             print("Error. El número debe tener 9 dígitos y comenzar con 9")
@@ -75,12 +77,12 @@ while True:
 
             # si no coincide el login para alguno de los 3 usuarios, errores:
             else:
-                if (intento_us == usuario1 or usuario2 or usuario3) and (intento_ct != contrasena1 or contrasena2 or contrasena3):
+                if (intento_us == usuario1 or intento_us == usuario2 or intento_us == usuario3) and (intento_ct != contrasena1 or intento_ct != contrasena2 or intento_ct != contrasena3):
                     print("Contraseña incorrecta.")
-                elif intento_us != usuario1 or usuario2 or usuario3:
+                elif intento_us != usuario1 or intento_us != usuario2 or intento_us != usuario3:
                     print("Nombre de usuario incorrecto.")
                 else:
-                    print("Nombre y usuario incorrectos.")
+                    print("Datos de ingreso incorrectos.")
     
     # inicio opción 2:
     elif opcion_menu1 == 2:
